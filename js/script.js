@@ -6,17 +6,17 @@ document.getElementById('logo').addEventListener('click', function() {
 
 const buttonData = {
     telegram: {
-        qrCode: 'http://qrcoder.ru/code/?https%3A%2F%2Ft.me%2Fleg4liz&4&0',
+        qrCode: 'img/telegram.png',
         link: 'https://t.me/leg4liz',
         title: 'Telegram'
     },
     telegram_channel: {
-        qrCode: 'http://qrcoder.ru/code/?https%3A%2F%2Ft.me%2Fleg4l1ze&4&0',
+        qrCode: 'img/channel.png',
         link: 'https://t.me/leg4l1ze',
         title: 'Telegram Channel'
     },
     vkontakte: {
-        qrCode: 'http://qrcoder.ru/code/?https%3A%2F%2Fvk.com%2Fpechalno47&4&0',
+        qrCode: 'img/vk.png',
         link: 'https://vk.com/pechalno47',
         title: 'VKontakte'
     },
