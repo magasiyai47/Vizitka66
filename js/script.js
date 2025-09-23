@@ -6,17 +6,17 @@ document.getElementById('logo').addEventListener('click', function() {
 
 const buttonData = {
     telegram: {
-        qrCode: '/img/telegram.png',
+        qrCode: 'img/telegram.png',
         link: 'https://t.me/leg4liz',
         title: 'Telegram'
     },
     telegram_channel: {
-        qrCode: '/img/channel.png',
+        qrCode: 'img/channel.png',
         link: 'https://t.me/leg4l1ze',
         title: 'Telegram Channel'
     },
     vkontakte: {
-        qrCode: '/img/vk.png',
+        qrCode: 'img/vk.png',
         link: 'https://vk.com/pechalno47',
         title: 'VKontakte'
     },
@@ -134,36 +134,39 @@ function setupButtonHandlers() {
                 
             } else {
                 const socialContent = `
-                    <h3 style="margin-bottom: 20px; color: #F5F5F5;">${data.title}</h3>
-                    <img src="${data.qrCode}" alt="QR Code" style="
-                        width: 200px;
-                        height: 200px;
-                        margin-bottom: 25px;
-                        border: 3px solid #F5F5F5;
-                        border-radius: 10px;
-                    ">
-                    <a href="${data.link}" target="_blank" class="go-link" style="
-                        display: inline-block;
-                        background: #F5F5F5;
-                        color: #1A1A1A;
-                        padding: 12px 30px;
-                        border-radius: 8px;
-                        text-decoration: none;
-                        font-size: 1.1em;
-                        margin-bottom: 15px;
-                        transition: all 0.2s linear;
-                    ">Перейти</a>
-                    <br>
-                    <button class="close-modal" style="
-                        background: #666;
-                        color: white;
-                        border: none;
-                        padding: 8px 20px;
-                        border-radius: 5px;
-                        cursor: pointer;
-                        transition: all 0.2s linear;
-                    ">Закрыть</button>
-                `;
+    <h3 style="margin-bottom: 20px; color: #F5F5F5;">${data.title}</h3>
+    <img src="${data.qrCode}" 
+         alt="QR Code" 
+         onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(data.link)}'"
+         style="
+            width: 200px;
+            height: 200px;
+            margin-bottom: 25px;
+            border: 3px solid #F5F5F5;
+            border-radius: 10px;
+         ">
+    <a href="${data.link}" target="_blank" class="go-link" style="
+        display: inline-block;
+        background: #F5F5F5;
+        color: #1A1A1A;
+        padding: 12px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1.1em;
+        margin-bottom: 15px;
+        transition: all 0.2s linear;
+    ">Перейти</a>
+    <br>
+    <button class="close-modal" style="
+        background: #666;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s linear;
+    ">Закрыть</button>
+`;
                 
                 createModal(socialContent);
             }
