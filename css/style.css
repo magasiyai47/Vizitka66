@@ -4,6 +4,7 @@
     border: none;
     outline: none;
     box-sizing: border-box;
+    font-family: Georgia, sans-serif;
 }
 
 body {
@@ -11,23 +12,25 @@ body {
     text-align: center;
     background-color: #1A1A1A;
     font-family: Georgia, sans-serif;
-    text-decoration: none;
-    
+    text-decoration: none; 
 }
 
 
 .main {
     padding: 2%;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
 }
 
 .logo {
     object-fit: cover;
-    max-width: 20%;
+    width: clamp(200px, 20vw, 800px);
     height: auto;
     border-radius: 50%;
     outline: 5px solid #333333;
@@ -60,7 +63,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: clamp(250px, 30vw, 800px);
 }
 
 
